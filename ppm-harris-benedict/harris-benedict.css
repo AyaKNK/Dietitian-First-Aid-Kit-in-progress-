@@ -1,0 +1,59 @@
+body {
+    min-width: 100%;
+    min-height: 100%;
+    background: greenyellow;
+    margin: 0;
+}
+h1 {
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 30px;
+}
+.wrapper {
+    position: relative;
+    margin: 80px auto;
+    width: 400px;
+    height: 600px;
+    background: rgb(236, 236, 236);
+}
+.gender {
+    margin: 0 auto;
+    padding-top: 40px;
+    width: 300px;
+}
+.gender p {
+    display: inline-block;;
+}
+.gender select {
+    margin: 16px 57px;
+}
+.input {
+    margin: 0 auto;
+    padding-top: 20px;
+    width: 300px;
+}
+.input input {
+    margin: 16px 0 16px 16px;
+    width: 90px;
+}
+input.growth {
+    margin-left: 39px;
+}
+input.age {
+    margin-left: 51px;
+}
+.input p {
+    display: inline-block;
+}
+button {
+    margin: 30px auto;
+    display: block;
+}
+.score {
+    position: absolute;
+    bottom: 30px;
+    margin: 50px;
+}
+.score p{
+    font-size: 20px;
+}

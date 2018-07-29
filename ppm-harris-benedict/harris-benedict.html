@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, minimum-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="harris-benedict.css" />
+</head>
+<body>
+    <h1>KALKULATOR:<br>PODSTAWOWA PRZEMIANA MATERII (PPM)<br>WZÓR HARRISA-BENEDICTA</h1>
+    <form name="calc" id="calc">
+        <div class="wrapper">
+            <div class="gender">
+                <p>Płeć:</p>
+                <select>
+                    <option>Kobieta</option>
+                    <option>Mężczyzna</option>
+                </select>
+            </div>
+            <div class="input">
+                <p>Wzrost:</p>
+                <input class="growth" type="text" value="190">
+                <p>cm</p>
+            </div>
+            <div class="input">
+                <p>Masa ciała:</p>
+                <input class="weight" type="text" value="80">
+                <p>kg</p>
+            </div>
+            <div class="input">
+                <p>Wiek:</p>
+                <input class="age" type="text" value="25">
+            </div>
+            <button>Oblicz</button>
+            <div class="score">
+                <p>Wynik:</p>
+                <p style="font-weight:bold;display:inline-block;"></p>
+            </div>
+        </div>
+    </form>
+    <script src="harris-benedict.js"></script>
+</body>
+</html>
