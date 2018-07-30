@@ -18,3 +18,34 @@ scrollTopButton.addEventListener('click', function() {
            }
        }, .1);
 });
+
+
+const buttonShowHide = document.querySelector('.button__show-hide');
+const buttonShowHideText = document.querySelector('.button__show-hide p');
+const hover = document.querySelectorAll('.button');
+const imgShow = document.querySelector('.eye-img-show');
+const imgHide = document.querySelector('.eye-img-hide');
+buttonShowHide.addEventListener('click', function(){
+    for(x=0; x<hover.length; x++) {
+        hover[x].classList.toggle('nohover');
+    }
+    if (buttonShowHideText.innerHTML === "SCHOWAJ") {
+        buttonShowHideText.innerHTML = "POKAŻ<br>WSZYSTKO";
+        imgShow.style.display = "inline-block";
+        imgHide.style.display = "none";
+    } else {
+        buttonShowHideText.innerHTML = "SCHOWAJ";
+        imgShow.style.display = "none";
+        imgHide.style.display = "inline-block";
+    }
+});
+window.addEventListener('resize', function(){
+    if(window.innerWidth <= 425) {
+        for(x=0; x<hover.length; x++) {
+            hover[x].classList.remove('nohover');
+        }
+        buttonShowHideText.innerHTML = "POKAŻ<br>WSZYSTKO";
+        imgShow.style.display = "inline-block";
+        imgHide.style.display = "none";
+    }
+});
