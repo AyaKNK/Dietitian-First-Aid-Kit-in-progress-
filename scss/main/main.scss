@@ -1,3 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+@import url('https://fonts.googleapis.com/css?family=Acme');
+
+@mixin titles__white-font {
+  color: white;
+  -webkit-text-stroke: 1px black;
+  text-shadow:
+  1.5px 1.5px 0 #000,
+-.5px -.5px 0 #000,  
+.5px -.5px 0 #000,
+ -.5px .5px 0 #000,
+ .5px .5px 0 #000;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
 * {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
@@ -20,7 +36,7 @@
     width: 100%;
     margin: 0;
     padding: 0;
-    background: url(../img/backgrounds/diet-plan.jpg) no-repeat top center;
+    background: url(../../img/backgrounds/diet-plan.jpg) no-repeat top center;
     background-size: cover;
     /* filter: blur(2px) contrast(2) brightness(1) grayscale(0.5); */
   }
@@ -111,66 +127,71 @@
     position: relative;
     // padding: 15px;
     // border: 2px black solid;
-    height: 13.5vw;
-    width: 34vw;
+    height: 280px;
+    width: 670px;
     font-family: 'Pacifico', cursive;
-    font-size: 5.5vw;
     text-align: center;
-    line-height: 5vw;
     color: #8a1c09;
     // -webkit-text-stroke: .2vw #000;
+    .site__title-dietitian {
+      position: absolute;
+      display: inline-block;
+      font-size: 110px;
+      top: -25px;
+      right: -5px;
+      margin: 0;
+    }
     .site__title-first {
       position: absolute;
       display: inline-block;
-      left: 40%;
-      bottom: 33%;
+      left: 280px;
+      bottom: 65px;
       margin: 0;
-      font-size: 3.7vw;
-      line-height: 4vw;
+      font-size: 80px;
+      // line-height: calc(16px + 4vw);
       color: red;
     }
     .site__title-aid {
       position: absolute;
       display: inline-block;
-      left: 49%;
-      bottom: 10%;
+      left: 355px;
+      bottom: -7px;
       margin: 0;
-      font-size: 4.5vw;
-      line-height: 4vw;
+      font-size: 90px;
       color: red;
     }
     .site__title-pulse {
       position: absolute;
       display: inline-block;
-      bottom: 4.5%;
-      left: 38%;
+      bottom: 9px;
+      left: 280px;
       margin: 0;
       img {
-        width: 3.3vw;
-        height: 3.3vw;
+        width: 70px;
+        height: 70px;
       }
     }
     .site__title-kit {
       position: absolute;
       display: inline-block;
-      right: 4%;
-      bottom: 28%;
+      right: 0;
+      bottom: 45px;
       margin: 0;
-      font-size: 5vw;
-      letter-spacing: .5vw;
+      font-size: 100px;
+      letter-spacing: calc(1px + .5vw);
     }
     .my-logo {
       position: absolute;
       display: inline-block;
       width: auto;
-      right: 5%;
-      bottom: 2%;
-      font-size: calc(10px + 1vw);
+      right: 0;
+      bottom: 15px;
+      font-size: 35px;
       color: black;
       -webkit-text-stroke: 0px white;
       img {
-        width: 3vw;
-        height: 3vw;
+        width: 50px;
+        height: 50px;
       }
     }
   }
@@ -331,6 +352,7 @@
   }
 
   .button .button__title {
+    @include titles__white-font;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -340,18 +362,8 @@
     display: block;
     font-size: calc(16px + 1vw);
     text-align: center;
-    color: white;
-    -webkit-text-stroke: 1px black;
-    text-shadow:
-    1.5px 1.5px 0 #000,
-  -.5px -.5px 0 #000,  
-  .5px -.5px 0 #000,
-   -.5px .5px 0 #000,
-   .5px .5px 0 #000;
-    font-weight: bold;
     width: 100%;
     max-height: 180px;
-    letter-spacing: 2px;
     margin: auto 0;
   }
   .button .button__background-fadein {
@@ -384,102 +396,102 @@
   }
   
   .button__bmi {
-    background: url(../img/backgrounds/transparent/bmi-bg-transparent.png) no-repeat center center;
+    background: url(../../img/backgrounds/transparent/bmi-bg-transparent.png) no-repeat center center;
     background-size: cover;
   }
   
   .button__bmi:hover {
-    background: url(../img/backgrounds/bmi-bg.jpg) no-repeat center center;
+    background: url(../../img/backgrounds/bmi-bg.jpg) no-repeat center center;
     background-size: cover;
   }
   
   .button__broc {
-    background: url(../img/backgrounds/transparent/broca-bg-transparent.png) no-repeat center center;
+    background: url(../../img/backgrounds/transparent/broca-bg-transparent.png) no-repeat center center;
     background-size: cover;
   }
   
   .button__broc:hover {
-    background: url(../img/backgrounds/broca-bg.jpg) no-repeat center center;
+    background: url(../../img/backgrounds/broca-bg.jpg) no-repeat center center;
     background-size: cover;
   }
   
   .button__cpm {
-    background: url(../img/backgrounds/transparent/cpm-bg-transparent.png) no-repeat center center;
+    background: url(../../img/backgrounds/transparent/cpm-bg-transparent.png) no-repeat center center;
     background-size: cover;
   }
   
   .button__cpm:hover {
-    background: url(../img/backgrounds/cpm-bg.jpg) no-repeat center center;
+    background: url(../../img/backgrounds/cpm-bg.jpg) no-repeat center center;
     background-size: cover;
   }
   
   .button__glycemic {
-    background: url(../img/backgrounds/transparent/glycemic-bg-transparent.png) no-repeat center center;
+    background: url(../../img/backgrounds/transparent/glycemic-bg-transparent.png) no-repeat center center;
     background-size: cover;
   }
   
   .button__glycemic:hover {
-    background: url(../img/backgrounds/glycemic-bg.jpg) no-repeat center center;
+    background: url(../../img/backgrounds/glycemic-bg.jpg) no-repeat center center;
     background-size: cover;
   }
   
   .button__lorentz {
-    background: url(../img/backgrounds/transparent/lorentz-bg-transparent.png) no-repeat center center;
+    background: url(../../img/backgrounds/transparent/lorentz-bg-transparent.png) no-repeat center center;
     background-size: cover;
   }
   
   .button__lorentz:hover {
-    background: url(../img/backgrounds/lorentz-bg.jpg) no-repeat center center;
+    background: url(../../img/backgrounds/lorentz-bg.jpg) no-repeat center center;
     background-size: cover;
   }
   
   .button__harris-benedict {
-    background: url(../img/backgrounds/transparent/harris-benedict-bg-transparent.png) no-repeat center center;
+    background: url(../../img/backgrounds/transparent/harris-benedict-bg-transparent.png) no-repeat center center;
     background-size: cover;
   }
   
   .button__harris-benedict:hover {
-    background: url(../img/backgrounds/harris-benedict-bg.jpg) no-repeat center center;
+    background: url(../../img/backgrounds/harris-benedict-bg.jpg) no-repeat center center;
     background-size: cover;
   }
   
   .button__mifflin {
-    background: url(../img/backgrounds/transparent/mifflin-bg-transparent.png) no-repeat center center;
+    background: url(../../img/backgrounds/transparent/mifflin-bg-transparent.png) no-repeat center center;
     background-size: cover;
   }
   
   .button__mifflin:hover {
-    background: url(../img/backgrounds/mifflin-bg.jpg) no-repeat center center;
+    background: url(../../img/backgrounds/mifflin-bg.jpg) no-repeat center center;
     background-size: cover;
   }
   
   .button__pral {
-    background: url(../img/backgrounds/transparent/pral-bg-transparent.png) no-repeat center center;
+    background: url(../../img/backgrounds/transparent/pral-bg-transparent.png) no-repeat center center;
     background-size: cover;
   }
   
   .button__pral:hover {
-    background: url(../img/backgrounds/pral-bg.jpg) no-repeat center center;
+    background: url(../../img/backgrounds/pral-bg.jpg) no-repeat center center;
     background-size: cover;
   }
   
   .button__whr {
-    background: url(../img/backgrounds/transparent/whr-bg-transparent.png) no-repeat center center;
+    background: url(../../img/backgrounds/transparent/whr-bg-transparent.png) no-repeat center center;
     background-size: cover;
   }
   
   .button__whr:hover {
-    background: url(../img/backgrounds/whr-bg.jpg) no-repeat center center;
+    background: url(../../img/backgrounds/whr-bg.jpg) no-repeat center center;
     background-size: cover;
   }
   
   .button__ymca {
-    background: url(../img/backgrounds/transparent/ymca-bg-transparent.png) no-repeat center center;
+    background: url(../../img/backgrounds/transparent/ymca-bg-transparent.png) no-repeat center center;
     background-size: cover;
   }
   
   .button__ymca:hover {
-    background: url(../img/backgrounds/ymca-bg.jpg) no-repeat center center;
+    background: url(../../img/backgrounds/ymca-bg.jpg) no-repeat center center;
     background-size: cover;
   }
 
@@ -539,8 +551,96 @@
       }
     }
   }
-  // @media only screen and (max-width: 768px) {
-  //   .title__wrapper {
+  @media only screen and (max-width: 768px) {
+    .title__wrapper {
+      margin: 40px auto 15px;
+    }
+    .site__title {
+      position: relative;
+      // padding: 15px;
+      // border: 2px black solid;
+      height: calc(50px + 13.5vw);
+      width: calc(140px + 32vw);
+      font-family: 'Pacifico', cursive;
+      text-align: center;
+      line-height: calc(16px + 3.5vw);
+      color: #8a1c09;
+      // -webkit-text-stroke: .2vw #000;
+      .site__title-dietitian {
+        position: absolute;
+        display: inline-block;
+        font-size: calc(25px + 5vw);
+        top: 5%;
+        right: 0;
+        margin: 0;
+      }
+      .site__title-first {
+        position: absolute;
+        display: inline-block;
+        left: 42%;
+        bottom: 31%;
+        margin: 0;
+        font-size: calc(14px + 3.5vw);
+        line-height: calc(16px + 4vw);
+        color: red;
+      }
+      .site__title-aid {
+        position: absolute;
+        display: inline-block;
+        left: 51%;
+        bottom: 10%;
+        margin: 0;
+        font-size: calc(20px + 4vw);
+        line-height: calc(16px + 4vw);
+        color: red;
+      }
+      .site__title-pulse {
+        position: absolute;
+        display: inline-block;
+        bottom: 2%;
+        left: 39%;
+        margin: 0;
+        img {
+          width: calc(18px + 3vw);
+          height: calc(18px + 3vw);
+        }
+      }
+      .site__title-kit {
+        position: absolute;
+        display: inline-block;
+        right: 2%;
+        bottom: 28%;
+        margin: 0;
+        font-size: calc(24px + 4vw);
+        letter-spacing: calc(1px + .5vw);
+      }
+      .my-logo {
+        position: absolute;
+        display: inline-block;
+        width: auto;
+        right: 5%;
+        bottom: 0;
+        font-size: calc(10px + 1vw);
+        color: black;
+        -webkit-text-stroke: 0px white;
+        img {
+          width: calc(15px + 3vw);
+          height: calc(15px + 3vw);
+        }
+      }
+    }
+    .rotate-briefcase {
+      height: inherit;
+      padding-bottom:1.2vw;
+    }
+  }
+  
+  
+
+
+
+
+    //   .title__wrapper {
   //     margin: 40px auto 15px;
   //   }
   //   .site__title {
@@ -614,4 +714,3 @@
   //     height: inherit;
   //     padding-bottom:1.2vw;
   //   }
-  // }

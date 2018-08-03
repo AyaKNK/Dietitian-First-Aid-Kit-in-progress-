@@ -1,0 +1,123 @@
+@import url("../../scss/main/main.css");
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans:700");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.subpage-title {
+  margin: 40px auto 0;
+  text-align: center;
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 900;
+  font-size: calc(10px + 2.5vw);
+  color: white;
+  -webkit-text-stroke: 2px black;
+  text-shadow: 3px 3px 0 #000, -1px -1px 0 #000,   1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.wrapper {
+  position: relative;
+  margin: 30px auto;
+  width: 400px;
+  height: auto;
+  color: white;
+  background: rgba(0, 0, 0, 0.8);
+  border: 4px #242424 solid;
+  border-radius: 10px;
+}
+
+.select-field {
+  position: relative;
+  width: 300px;
+  margin: 40px auto;
+}
+
+.select-field p {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  display: inline-block;
+  left: 20%;
+}
+
+.select-field select {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 25%;
+}
+
+.input-field {
+  margin: 40px auto;
+  padding-top: 20px;
+  width: 300px;
+}
+
+.input-field input {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 25%;
+  width: 90px;
+}
+
+.input-field p {
+  display: inline-block;
+}
+
+.input-field p:nth-child(1) {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 20%;
+}
+
+.input-field p:nth-child(3) {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 15%;
+}
+
+button {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: block;
+}
+
+.score {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: 0px;
+}
+
+.score p {
+  display: inline-block;
+  font-size: 20px;
+}
+/*# sourceMappingURL=calc-style.css.map */
