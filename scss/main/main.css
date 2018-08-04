@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Pacifico");
 @import url("https://fonts.googleapis.com/css?family=Acme");
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css);
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -255,7 +256,7 @@ body, html {
           user-select: none;
   -webkit-transition: all .3s;
   transition: all .3s;
-  background: rgba(138, 28, 9, 0.8);
+  background: rgba(138, 28, 9, 0.5);
 }
 
 .button__show-hide p {
@@ -294,7 +295,7 @@ body, html {
 }
 
 .button__show-hide:hover {
-  background: rgba(138, 28, 9, 0.5);
+  background: rgba(138, 28, 9, 0.8);
   border: 2px rgba(0, 0, 0, 0.5) solid;
   color: rgba(0, 0, 0, 0.5);
   -webkit-transition: all .3s;

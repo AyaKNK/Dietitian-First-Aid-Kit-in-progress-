@@ -1,6 +1,7 @@
 @import url("../../scss/main/main.css");
 
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans:700');
+@import url('https://fonts.googleapis.com/css?family=Muli');
 
 @mixin vertical-align__center {
     position: absolute;
@@ -12,11 +13,41 @@
     left: 50%;
     transform: translateX(-50%);
 }
+@mixin standard-field-height {
+    height: 30px;
+}
+@mixin primary-border {
+    border: none;
+    border-bottom: 2px solid white;
+    background: transparent;
+    color: white;
+}
+
+.return-btn {
+    position: fixed;
+    left: 10px;
+    top: 10px;
+    font-size: 18px;
+    z-index: 100;
+    text-decoration: none;
+    .arrow {
+        width: 70px;
+        height: 25px;
+    }
+    .return {
+        color: white;
+    }
+    .return:hover {
+        color: rgb(128, 128, 128);
+    }
+    
+}
 
 
 * {
     box-sizing: border-box;
 }
+
 body {
     position: relative;
     top: 0;
@@ -32,7 +63,7 @@ body {
 // filter: blur(2px) contrast(2) brightness(1) grayscale(0.5);
 
 .subpage-title {
-    margin: 40px auto 0;
+    margin: 40px auto 30px;
     text-align: center;
     font-family: 'Noto Sans', sans-serif;
     font-weight: 900;
@@ -51,50 +82,97 @@ body {
 .wrapper {
     position: relative;
     margin: 30px auto;
-    width: 400px;
+    width: auto;
+    max-width: 400px; 
     height: auto;
     color: white;
     background: rgba(0,0,0,0.8);
-    border: 4px rgb(36, 36, 36) solid;
+    // border: 2px white solid;
     border-radius: 10px;
+    font-family: 'Muli', sans-serif;
+    letter-spacing: 1px;
 }
 
 .select-field {
+    @include standard-field-height;
     position: relative;
-    // margin: 0 auto;
-    // padding-top: 40px;
-    width: 300px;
-    margin: 40px auto;
+    width: 100%;
+    margin: 30px auto;
     p {
         @include vertical-align__center;
         display: inline-block;
-        left: 20%;
+        left: 15%;
+        font-size: 20px;
     }
     select {
         @include vertical-align__center;
+        @include primary-border;
         right: 25%;
+        text-align-last:center; 
+        height: 30px;
+        outline: none;
+        width: 102.44px;
+        transition: .1s all;
+    }
+    option {
+        background: rgba(0,0,0,0.8);
+        color: white;
+        transition: .1s all;
+    }
+    option:hover {
+        background: rgba(138, 28, 9, 0.5);
+        transition: .1s all;
     }
 }
 
 .input-field {
-    margin: 40px auto;
-    padding-top: 20px;
+    @include standard-field-height;
+    margin: 30px auto;
     width: 300px;
-    input {
+    font-size: 20px;
+    input[type=text] {
         @include vertical-align__center;
+        @include primary-border;
         right: 25%;
-        width: 90px;
+        width: 102.44px;
+        text-align: center;
+    }
+    input:focus {
+        outline: 0;
     }
     p {
         display: inline-block;
     }
     p:nth-child(1) {
         @include vertical-align__center;
-        left: 20%;
+        left: 15%;
     }
     p:nth-child(3) {
-        @include vertical-align__center;
+        @include vertical-align__center; 
         right: 15%;
+    }
+}
+
+
+.score {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 30px 0 0 0;
+    width: 80%;
+    height: 80px;
+    font-size: 26px;
+    border-bottom: .5px rgb(255, 255, 255) solid;
+    p:nth-child(1) {
+        @include horizontal-align__center;
+        display: inline-block;
+    }
+    p:nth-child(2) {
+        @include horizontal-align__center;
+        display: block;
+        text-align: center;
+        width: 100%;
+        bottom: -10px;
     }
 }
 
@@ -102,12 +180,32 @@ button {
     @include horizontal-align__center;
     // margin: 30px auto;
     display: block;
+    color: white;
+    background: transparent;
+    border: 2px white solid;
+    padding: 5px 15px;
+    cursor: pointer;
+    transition: .1s all;
+    font-size: 20px !important;
 }
-.score {
-    @include horizontal-align__center;
-    bottom: 0px;
-    p {
-        display: inline-block;
-        font-size: 20px;
-    }
+.btn-radius {
+    border-radius: 10px; 
+}
+button:hover {
+    background: rgb(37, 37, 37);
+    transition: .2s all;
+}
+button:active {
+    // border: 1px white solid;
+    transition: .1s all;
+    font-size: 21px !important;
+}
+button:focus {
+    outline: 0 !important;
+}
+
+.margin {
+    @include standard-field-height;
+    position: relative;
+    margin: 40px 0;
 }

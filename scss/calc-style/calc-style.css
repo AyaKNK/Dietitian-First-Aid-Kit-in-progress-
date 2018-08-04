@@ -1,5 +1,28 @@
 @import url("../../scss/main/main.css");
 @import url("https://fonts.googleapis.com/css?family=Noto+Sans:700");
+@import url("https://fonts.googleapis.com/css?family=Muli");
+.return-btn {
+  position: fixed;
+  left: 10px;
+  top: 10px;
+  font-size: 18px;
+  z-index: 100;
+  text-decoration: none;
+}
+
+.return-btn .arrow {
+  width: 70px;
+  height: 25px;
+}
+
+.return-btn .return {
+  color: white;
+}
+
+.return-btn .return:hover {
+  color: gray;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -19,7 +42,7 @@ body {
 }
 
 .subpage-title {
-  margin: 40px auto 0;
+  margin: 40px auto 30px;
   text-align: center;
   font-family: 'Noto Sans', sans-serif;
   font-weight: 900;
@@ -34,18 +57,21 @@ body {
 .wrapper {
   position: relative;
   margin: 30px auto;
-  width: 400px;
+  width: auto;
+  max-width: 400px;
   height: auto;
   color: white;
   background: rgba(0, 0, 0, 0.8);
-  border: 4px #242424 solid;
   border-radius: 10px;
+  font-family: 'Muli', sans-serif;
+  letter-spacing: 1px;
 }
 
 .select-field {
+  height: 30px;
   position: relative;
-  width: 300px;
-  margin: 40px auto;
+  width: 100%;
+  margin: 30px auto;
 }
 
 .select-field p {
@@ -54,7 +80,8 @@ body {
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   display: inline-block;
-  left: 20%;
+  left: 15%;
+  font-size: 20px;
 }
 
 .select-field select {
@@ -62,22 +89,55 @@ body {
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+  border: none;
+  border-bottom: 2px solid white;
+  background: transparent;
+  color: white;
   right: 25%;
+  text-align-last: center;
+  height: 30px;
+  outline: none;
+  width: 102.44px;
+  -webkit-transition: .1s all;
+  transition: .1s all;
+}
+
+.select-field option {
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  -webkit-transition: .1s all;
+  transition: .1s all;
+}
+
+.select-field option:hover {
+  background: rgba(138, 28, 9, 0.5);
+  -webkit-transition: .1s all;
+  transition: .1s all;
 }
 
 .input-field {
-  margin: 40px auto;
-  padding-top: 20px;
+  height: 30px;
+  margin: 30px auto;
   width: 300px;
+  font-size: 20px;
 }
 
-.input-field input {
+.input-field input[type=text] {
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+  border: none;
+  border-bottom: 2px solid white;
+  background: transparent;
+  color: white;
   right: 25%;
-  width: 90px;
+  width: 102.44px;
+  text-align: center;
+}
+
+.input-field input:focus {
+  outline: 0;
 }
 
 .input-field p {
@@ -89,7 +149,7 @@ body {
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  left: 20%;
+  left: 15%;
 }
 
 .input-field p:nth-child(3) {
@@ -100,24 +160,76 @@ body {
   right: 15%;
 }
 
+.score {
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  margin: 30px 0 0 0;
+  width: 80%;
+  height: 80px;
+  font-size: 26px;
+  border-bottom: 0.5px white solid;
+}
+
+.score p:nth-child(1) {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: inline-block;
+}
+
+.score p:nth-child(2) {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: block;
+  text-align: center;
+  width: 100%;
+  bottom: -10px;
+}
+
 button {
   position: absolute;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   display: block;
+  color: white;
+  background: transparent;
+  border: 2px white solid;
+  padding: 5px 15px;
+  cursor: pointer;
+  -webkit-transition: .1s all;
+  transition: .1s all;
+  font-size: 20px !important;
 }
 
-.score {
-  position: absolute;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  bottom: 0px;
+.btn-radius {
+  border-radius: 10px;
 }
 
-.score p {
-  display: inline-block;
-  font-size: 20px;
+button:hover {
+  background: #252525;
+  -webkit-transition: .2s all;
+  transition: .2s all;
+}
+
+button:active {
+  -webkit-transition: .1s all;
+  transition: .1s all;
+  font-size: 21px !important;
+}
+
+button:focus {
+  outline: 0 !important;
+}
+
+.margin {
+  height: 30px;
+  position: relative;
+  margin: 40px 0;
 }
 /*# sourceMappingURL=calc-style.css.map */

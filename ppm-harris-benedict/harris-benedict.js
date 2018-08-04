@@ -9,8 +9,8 @@ formElement.addEventListener('submit', function(e){
     const score = document.querySelector('.score').children[1];
     const select = document.querySelector('select');
     if(select.selectedIndex == 0){
-        score.textContent = Math.round((655.1 + (1.85*growthValue) + (9.563*weightValue) - (4.676*ageValue))) + " kcal";
+        score.textContent = "PPM = " + Math.round((66.5 + (5.003*growthValue) + (13.75*weightValue) - (6.775*ageValue))) + " kcal";
     } else {
-        score.textContent = Math.round((66.5 + (5.003*growthValue) + (13.75*weightValue) - (6.775*ageValue))) + " kcal";
+        score.textContent = "PPM = " + Math.round((655.1 + (1.85*growthValue) + (9.563*weightValue) - (4.676*ageValue))) + " kcal";
     }
 });
