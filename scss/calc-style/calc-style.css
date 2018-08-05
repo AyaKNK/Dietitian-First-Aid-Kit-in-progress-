@@ -11,16 +11,33 @@
 }
 
 .return-btn .arrow {
-  width: 70px;
-  height: 25px;
+  background: url(../../img/my-logo/return-arrow-white.png) no-repeat center center;
+  background-size: contain;
+  width: inherit;
+  height: 35px;
+  -webkit-transition: .3s all;
+  transition: .3s all;
+  margin: 0;
 }
 
 .return-btn .return {
   color: white;
+  -webkit-transition: .3s all;
+  transition: .3s all;
+  margin: 0;
 }
 
-.return-btn .return:hover {
+.return-btn:hover .arrow {
+  background: url(../../img/my-logo/return-arrow-white-hover.png) no-repeat center center;
+  background-size: contain;
+  -webkit-transition: .3s all;
+  transition: .3s all;
+}
+
+.return-btn:hover .return {
   color: gray;
+  -webkit-transition: .3s all;
+  transition: .3s all;
 }
 
 * {
@@ -160,12 +177,20 @@ body {
   right: 15%;
 }
 
+.validation-text {
+  text-align: center;
+  color: red;
+  height: auto;
+  width: 100%;
+  opacity: 0;
+}
+
 .score {
   position: relative;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  margin: 30px 0 0 0;
+  margin: 0;
   width: 80%;
   height: 80px;
   font-size: 26px;
@@ -189,6 +214,13 @@ body {
   text-align: center;
   width: 100%;
   bottom: -10px;
+  opacity: 0;
+}
+
+.score p:nth-child(2).show {
+  opacity: 1;
+  -webkit-transition: 1s all;
+  transition: 1s all;
 }
 
 button {
@@ -197,34 +229,58 @@ button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   display: block;
-  color: white;
-  background: transparent;
-  border: 2px white solid;
-  padding: 5px 15px;
+  position: relative;
+}
+
+.btn {
+  position: relative;
+  width: 100px;
+  height: auto;
   cursor: pointer;
-  -webkit-transition: .1s all;
-  transition: .1s all;
-  font-size: 20px !important;
-}
-
-.btn-radius {
+  border: 2px white solid !important;
   border-radius: 10px;
+  background: transparent;
+  color: white;
+  font-size: 20px !important;
+  overflow: hidden;
+  /*slider hide*/
 }
 
-button:hover {
-  background: #252525;
-  -webkit-transition: .2s all;
-  transition: .2s all;
+.btn:before {
+  content: "";
+  /*!!!*/
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: #333333;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  z-index: -1;
+}
+
+.btn:before {
+  bottom: -40px;
+}
+
+.btn:hover:before {
+  bottom: 0;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 button:active {
   -webkit-transition: .1s all;
   transition: .1s all;
   font-size: 21px !important;
+  border: 1.5px white solid !important;
+  width: 102px;
+  outline: 0 !important;
 }
 
 button:focus {
-  outline: 0 !important;
+  outline: none !important;
 }
 
 .margin {

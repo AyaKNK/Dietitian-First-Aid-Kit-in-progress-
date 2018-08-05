@@ -19,7 +19,6 @@ scrollTopButton.addEventListener('click', function() {
        }, .1);
 });
 
-
 const buttonShowHide = document.querySelector('.button__show-hide');
 const buttonShowHideText = document.querySelector('.button__show-hide p');
 const hover = document.querySelectorAll('.button');
