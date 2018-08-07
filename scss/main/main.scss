@@ -15,6 +15,7 @@
   font-weight: bold;
   letter-spacing: 2px;
 }
+$defaultTransparentBlackBg: rgba(0,0,0,0.8);
 
 * {
     -webkit-box-sizing: border-box;
@@ -97,7 +98,7 @@
     margin: calc(5px + 1vw);
     width: calc(40px + 2vw);
     height: calc(40px + 2vw);
-    background: rgba(0,0,0,0.7);
+    background: $defaultTransparentBlackBg;
     border-radius: 5px;
     display: none;
     cursor: pointer;
@@ -218,7 +219,7 @@
       position: relative;
       color: white;
       .description__text {
-        background: rgba(0,0,0,0.5);
+        background: $defaultTransparentBlackBg;
         text-align: center;
         font-size: calc(6px + 1vw);
         border-radius: 10px;
@@ -236,11 +237,11 @@
       }
       .description__bg-decoration-right {
         right: -45px;
-        border-left:60px solid rgba(0,0,0,0.5); 
+        border-left:60px solid $defaultTransparentBlackBg; 
       }
       .description__bg-decoration-left {
         left: -45px;
-        border-right:60px solid rgba(0,0,0,0.5); 
+        border-right:60px solid $defaultTransparentBlackBg; 
       }
   }
 
@@ -371,7 +372,7 @@
   .button .button__background-fadein {
     position: absolute;
     bottom: 0;
-    background: rgba(0,0,0,0.7);
+    background: $defaultTransparentBlackBg;
     width: 100%;
     height: 0;
     margin: 0;

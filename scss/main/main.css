@@ -88,7 +88,7 @@ body, html {
   margin: calc(5px + 1vw);
   width: calc(40px + 2vw);
   height: calc(40px + 2vw);
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.8);
   border-radius: 5px;
   display: none;
   cursor: pointer;
@@ -212,7 +212,7 @@ body, html {
 }
 
 .description .description__text {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.8);
   text-align: center;
   font-size: calc(6px + 1vw);
   border-radius: 10px;
@@ -233,12 +233,12 @@ body, html {
 
 .description .description__bg-decoration-right {
   right: -45px;
-  border-left: 60px solid rgba(0, 0, 0, 0.5);
+  border-left: 60px solid rgba(0, 0, 0, 0.8);
 }
 
 .description .description__bg-decoration-left {
   left: -45px;
-  border-right: 60px solid rgba(0, 0, 0, 0.5);
+  border-right: 60px solid rgba(0, 0, 0, 0.8);
 }
 
 .button__show-hide {
@@ -398,7 +398,7 @@ a .nohover .button__background-fadein .button__text-fadein {
 .button .button__background-fadein {
   position: absolute;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.8);
   width: 100%;
   height: 0;
   margin: 0;

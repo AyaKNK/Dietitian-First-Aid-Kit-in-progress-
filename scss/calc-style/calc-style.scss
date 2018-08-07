@@ -61,14 +61,10 @@
     box-sizing: border-box;
 }
 
-body {
+body, html {
     position: relative;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
+    min-height: 100%;
+    min-width: 100%;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
@@ -115,6 +111,7 @@ body {
         display: inline-block;
         left: 15%;
         font-size: 20px;
+        font-weight: bolder !important;
     }
     select {
         @include vertical-align__center;
@@ -136,13 +133,28 @@ body {
         transition: .1s all;
     }
 }
+.select-field.select-field-wide {
+    height: 78px;
+    p {
+        top: 0;
+        display: block;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    select {
+        left: 50%;
+        transform: translateX(-50%);
+        width: auto;
+        margin: 10px 0 0 0;
+    }
+}
 
 .input-field {
     @include standard-field-height;
     margin: 30px auto;
     width: 300px;
     font-size: 20px;
-    input[type=text] {
+    input[type=number] {
         @include vertical-align__center;
         @include primary-border;
         right: 25%;
@@ -163,6 +175,39 @@ body {
         @include vertical-align__center; 
         right: 15%;
     }
+}
+.input-field.input-field-wide {
+    height: 78px;
+    input[type=number] {
+        left: 50%;
+        transform: translateX(-50%);
+        width: auto;
+        margin: 10px 0 0 0;
+    }
+    p:nth-child(1) {
+        top: 0;
+        display: block;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    p:nth-child(3) {
+        top: none;
+        transform: none;
+        top: 67%;
+        display: block;
+        right: 15%;
+    }
+}
+
+.link {
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    transition: all .3s;
+}
+.link:hover {
+    color: grey;
+    transition: all .3s;
 }
 
 .validation-text {

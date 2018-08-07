@@ -4,30 +4,29 @@ const validationText = document.querySelector('.validation-text');
 
 formElement.addEventListener('submit', function(e){
     e.preventDefault();
-    debugger;
     function validation() {
         for(v=0; v < allValueFields.length; v++){
-            const reg = /^\d+$/;
-            // || allValueFields[v].value !== reg
             if(allValueFields[v].value == ""){
+
                 allValueFields[v].style.border = "2px red solid";
                 validationText.style.opacity= "1";
-            // } else if(v < 3){
-                // return false;
-                // break;
+
             } else if(allValueFields[v].value !== "") {
+
                 allValueFields[v].style.border = 'none';
                 allValueFields[v].style.borderBottom = '2px solid white';
+
             }
         }
     }
     validation();
+
     if(allValueFields[0].value && allValueFields[1].value && allValueFields[2].value !== "") {
         validationText.style.opacity= "0";
 
-        const growthValue = formElement.querySelector('input[type="text"].growth').value;
-        const weightValue = formElement.querySelector('input[type="text"].weight').value;
-        const ageValue = formElement.querySelector('input[type="text"].age').value;
+        const growthValue = formElement.querySelector('input[type="number"].growth').value;
+        const weightValue = formElement.querySelector('input[type="number"].weight').value;
+        const ageValue = formElement.querySelector('input[type="number"].age').value;
         const select = document.querySelector('select');
         const score = document.querySelector('.score').children[1];
         const button = document.querySelector('button');

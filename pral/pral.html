@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>PRAL - Potential Renal Acid Load</title>
+    <meta name="viewport" content="width=device-width, minimum-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="../scss/calc-style/calc-style.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <style>
+        body {
+            background:
+            linear-gradient(to top, rgba(0,0,0,0),rgba(0,0,0,0),rgba(0,0,0,0), rgba(0,0,0,0.7)),
+            url(../img/backgrounds/pral-bg.jpg)
+            no-repeat top center;
+
+            background-size: cover;
+        }
+    </style>
+</head>
+<link rel="shortcut icon" href="../img/my-logo/rotate-briefcase.png">
+<body>
+    <div class="container-fluid">
+        <div class="social-icons">
+            <a href="https://www.facebook.com/pawelr93" target="_blank" class="fa fa-facebook"></a>
+            <a href="https://github.com/sirPaul1" target="_blank" class="fa fa-github"></a>
+            <a class="fa fa-linkedin"></a>
+        </div>
+        <a href="../main.html">
+            <div class="return-btn">
+                <div class="arrow"></div>
+                <p class="return">POWRÓT</p>
+            </div>
+        </a>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-xs-12">
+                    <!-- <img align="left" class="rotate-briefcase" src="../img/my-logo/rotate-briefcase.png" /> -->
+                    <h1 class="subpage-title">KALKULATOR PRAL</h1>
+                </div>
+            </div>
+            <div class="row">
+                    <div class="col-lg-12 col-xs-12 description">
+                        <p class="description__text">
+                            Dzięki kalkulatorowi PRAL możesz określić czy dany produkt podnosi poziom kwasu nerkowego (produkt zakwaszający) bądź czy zmniejsza jego poziom (produkt alkalizujący). 
+                        </p>
+                        <div class="description__bg-decoration-left"></div>
+                        <div class="description__bg-decoration-right"></div>
+                    </div>
+                </div>
+            <form name="calc" id="calc">
+                <div class="wrapper">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12 col-xs-12 input-field">
+                                <p>Białko:</p>
+                                <input type="number" class="growth">
+                                <p>g</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12 col-xs-12 input-field">
+                                <p>Fosfor:</p>
+                                <input type="number" class="weight">
+                                <p>mg</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12 col-xs-12 input-field">
+                                <p>Potas:</p>
+                                <input type="number" class="age">
+                                <p>mg</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12 col-xs-12 input-field">
+                                <p>Magnez:</p>
+                                <input type="number" class="age">
+                                <p>mg</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12 col-xs-12 input-field">
+                                <p>Wapń:</p>
+                                <input type="number" class="age">
+                                <p>mg</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12 col-xs-12">
+                                <div class="validation-text">
+                                    <p>Wypełnij poprawnie puste pola!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12 col-xs-12">
+                                <div class="score">
+                                    <p>Wynik:</p>
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12 col-xs-12 margin">
+                                <button class="btn">
+                                    Oblicz
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="pral.js"></script>
+</body>
+</html>
