@@ -23,11 +23,11 @@ $defaultTransparentBlackBg: rgba(0,0,0,0.8);
   }
 
   body, html {
-      // height: 100%;
-      // width: 100%;
-      // margin: 0;
-      // padding: 0;
-      overflow-x: hidden;
+    min-height: 100%;
+    min-width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
   }
   .background {
     position: relative;
@@ -508,7 +508,6 @@ $defaultTransparentBlackBg: rgba(0,0,0,0.8);
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    font-family: 'Acme', sans-serif;
     font-size: calc(8px + 1vw);
     letter-spacing: 1px;
     height: auto;

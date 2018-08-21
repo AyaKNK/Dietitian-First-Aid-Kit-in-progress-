@@ -163,7 +163,7 @@ body, html {
   font-size: 20px;
 }
 
-.input-field input[type=number] {
+.input-field input[type=text] {
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -205,7 +205,7 @@ body, html {
   height: 78px;
 }
 
-.input-field.input-field-wide input[type=number] {
+.input-field.input-field-wide input[type=text] {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -264,19 +264,18 @@ body, html {
   border-bottom: 0.5px white solid;
 }
 
-.score p:nth-child(1) {
+.score p {
   position: absolute;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+}
+
+.score p:nth-child(1) {
   display: inline-block;
 }
 
 .score p:nth-child(2) {
-  position: absolute;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
   display: block;
   text-align: center;
   width: 100%;
@@ -284,10 +283,22 @@ body, html {
   opacity: 0;
 }
 
-.score p:nth-child(2).show {
+.score p:nth-child(3) {
+  display: block;
+  text-align: center;
+  width: 100%;
+  bottom: 25px;
+  opacity: 0;
+}
+
+.score p:nth-child(2).show, .score p:nth-child(3).show {
   opacity: 1;
   -webkit-transition: 1s all;
   transition: 1s all;
+}
+
+.score__longer {
+  height: 120px !important;
 }
 
 button {

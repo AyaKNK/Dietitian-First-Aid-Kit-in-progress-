@@ -165,7 +165,7 @@ body, html {
     margin: 30px auto;
     width: 300px;
     font-size: 20px;
-    input[type=number] {
+    input[type=text] {
         @include vertical-align__center;
         @include primary-border;
         right: 25%;
@@ -189,7 +189,7 @@ body, html {
 }
 .input-field.input-field-wide {
     height: 78px;
-    input[type=number] {
+    input[type=text] {
         left: 50%;
         transform: translateX(-50%);
         width: auto;
@@ -239,27 +239,35 @@ body, html {
     height: 80px;
     font-size: 26px;
     border-bottom: .5px rgb(255, 255, 255) solid;
-    p:nth-child(1) {
+    p {
         @include horizontal-align__center;
+    }
+    p:nth-child(1) {
         display: inline-block;
     }
     p:nth-child(2) {
-        @include horizontal-align__center;
         display: block;
         text-align: center;
         width: 100%;
         bottom: -10px;
         opacity: 0;
     }
-    p:nth-child(2).show {
+    p:nth-child(3) {
+        display: block;
+        text-align: center;
+        width: 100%;
+        bottom: 25px;
+        opacity: 0;
+    }
+    p:nth-child(2).show, p:nth-child(3).show {
         opacity: 1;
         transition: 1s all;
     }
 }
 
-
-
-
+.score__longer {
+    height: 120px !important;
+}
 
 
 button {
