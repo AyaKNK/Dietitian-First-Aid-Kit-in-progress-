@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>CPM - Total Metabolic Rate</title>
+    <title>BMI - Body Mass Effect</title>
     <meta name="viewport" content="width=device-width, minimum-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="../scss/calc-style/calc-style.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -13,7 +13,7 @@
             linear-gradient(to top, rgba(0,0,0,0),rgba(0,0,0,0),rgba(0,0,0,0), rgba(0,0,0,0.7)),
             linear-gradient(to left, rgba(0,0,0,0),rgba(0,0,0,0),rgba(0,0,0,0), rgba(0,0,0,0.5)),
             linear-gradient(to right, rgba(0,0,0,0),rgba(0,0,0,0),rgba(0,0,0,0), rgba(0,0,0,0.5)),
-            url(../img/backgrounds/cpm-bg.jpg)
+            url(../img/backgrounds/bmi-bg.jpg)
             no-repeat top center;
             
             background-size: cover;
@@ -38,13 +38,13 @@
             <div class="row">
                 <div class="col-lg-12 col-xs-12">
                     <!-- <img align="left" class="rotate-briefcase" src="../img/my-logo/rotate-briefcase.png" /> -->
-                    <h1 class="subpage-title">CAŁKOWITA PRZEMIANA MATERII (CPM)</h1>
+                    <h1 class="subpage-title">INDEKS MASY CIAŁA (BMI)</h1>
                 </div>
             </div>
             <div class="row">
                     <div class="col-lg-12 col-xs-12 description">
                         <p class="description__text">
-                            Kalkulator całkowitej przemiany materii pomoże dokładnie obliczyć przemianę materii pacjenta. Przy pomocy wzoru Mifflina lub Harrisa-Benedicta oraz wzięcia pod uwagę poziomu aktywności fizycznej osoby dla której przygotowywana jest dieta, można dokładniej określić przemianę materii. Jest to o tyle ważne, że źle dobrana do poziomu przemiany materii dieta może być niebezpieczna dla zdrowia.
+                            Kalkulator BMI (z ang. Body Mass Index - wskaźnik masy ciała) jest prostym kalkulatorem dietetycznym działającym na podstawie matematycznego wzoru opracowanego przez belgijskiego matematyka Lamberta Adolphe’a Jacquesa Queteleta. Dzięki niemu szybko i wygodnie obliczysz swój własny wskaźnik masy ciała.
                         </p>
                         <div class="description__bg-decoration-left"></div>
                         <div class="description__bg-decoration-right"></div>
@@ -54,55 +54,17 @@
                 <div class="wrapper">
                     <div class="container">
                         <div class="row">
-                            <div class="col-lg-12 col-xs-12 select-field select-field-wide">
-                                <p>Wzór na PPM:</p>
-                                <select>
-                                    <option>Wzór Mifflina</option>
-                                    <option>Wzór Harrisa-Benedicta</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-12 col-xs-12 select-field">
-                                <p>Płeć:</p>
-                                <select>
-                                    <option>Mężczyzna</option>
-                                    <option>Kobieta</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="row">
                             <div class="col-lg-12 col-xs-12 input-field">
                                 <p>Wzrost:</p>
-                                <input type="number" class="growth">
+                                <input type="text" class="input__comma-change growth">
                                 <p>cm</p>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-lg-12 col-xs-12 input-field">
                                 <p>Masa ciała:</p>
-                                <input type="number" class="weight">
+                                <input type="text" class="input__comma-change weight">
                                 <p>kg</p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-12 col-xs-12 input-field">
-                                <p>Wiek:</p>
-                                <input type="number" class="age">
-                                <p>lat</p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-12 col-xs-12 select-field select-field-wide">
-                                <p>Aktywność (PAL):</p>
-                                <select>
-                                    <option>pacjent leżący w łóżku</option>
-                                    <option>aktywność fizyczna niska</option>
-                                    <option>aktywność fizyczna umiarkowana</option>
-                                    <option>aktywny tryb życia</option>
-                                    <option>bardzo aktywny tryb życia</option>
-                                    <option>wyczynowe uprawianie sportu</option>
-                                </select>
                             </div>
                         </div>
                         <div class="row">
@@ -114,8 +76,9 @@
                         </div>
                         <div class="row">
                             <div class="col-lg-12 col-xs-12">
-                                <div class="score">
+                                <div class="score score__longer">
                                     <p>Wynik:</p>
+                                    <p></p>
                                     <p></p>
                                 </div>
                             </div>
@@ -132,6 +95,7 @@
             </form>
         </div>
     </div>
-    <script src="cpm.js"></script>
+    <script type="text/javascript" src="../js_subpages/_subpages_common-validation.js"></script>
+    <script type="text/javascript" src="../js_subpages/bmi.js"></script>
 </body>
 </html>
