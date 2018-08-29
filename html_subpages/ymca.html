@@ -30,8 +30,7 @@
         </div>
         <a href="../main.html">
             <div class="return-btn">
-                <div class="arrow"></div>
-                <p class="return">POWRÓT</p>
+                <div class="arrow" title="Powrót"></div>
             </div>
         </a>
         <div class="container">
@@ -44,7 +43,10 @@
             <div class="row">
                     <div class="col-lg-12 col-xs-12 description">
                         <p class="description__text">
-                            Kalkulator YMCA jest kalkulatorem obliczającym poziom tkanki tłuszczowej w organizmie człowieka. Znajomość procentowej zawartości tkanki tłuszczowej jest kluczowa podczas układania diety. Wiadomo wtedy czy dieta ma być nisko, czy wysoko tłuszczowa.
+                            Kalkulator YMCA jest kalkulatorem obliczającym poziom tkanki tłuszczowej w organizmie człowieka. Znajomość procentowej zawartości tkanki tłuszczowej jest kluczowa podczas układania diety. Wiadomo wtedy czy dieta ma być nisko, czy wysoko tłuszczowa. 
+                            <br><br> Wzór: 
+                            <br> Zawartość tkanki tłuszczowej (kobiety) = ((1,634 &times; obwód pasa [cm] - 0,1804 &times; masa ciała [kg] - 76,76 ) / 2,2 &times masa ciała [kg]) &times; 100 
+                            <br> Zawartość tkanki tłuszczowej (mężczyźni) = ((1,634 &times; obwód pasa [cm] - 0,1804 &times; masa ciała [kg] - 98,42 ) / 2,2 &times masa ciała [kg]) &times; 100
                         </p>
                         <div class="description__bg-decoration-left"></div>
                         <div class="description__bg-decoration-right"></div>
@@ -54,7 +56,7 @@
                 <div class="wrapper">
                     <div class="container">
                         <div class="row">
-                            <div class="col-lg-12 col-xs-12 select-field">
+                            <div class="col-lg-12 col-xs-12 select-container">
                                 <p>Płeć:</p>
                                 <select>
                                     <option>Mężczyzna</option>
@@ -63,16 +65,16 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-lg-12 col-xs-12 input-field">
+                            <div class="col-lg-12 col-xs-12 input-container">
                                 <p>Obwód<br>pasa:</p>
-                                <input type="number" class="growth">
+                                <input type="text" class="input-field waist">
                                 <p>cm</p>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-lg-12 col-xs-12 input-field">
+                            <div class="col-lg-12 col-xs-12 input-container">
                                 <p>Masa ciała:</p>
-                                <input type="number" class="weight">
+                                <input type="text" class="input-field weight">
                                 <p>kg</p>
                             </div>
                         </div>
@@ -103,6 +105,7 @@
             </form>
         </div>
     </div>
-    <script src="ymca.js"></script>
+    <script type="text/javascript" src="../js_subpages/_subpages_common-validation.js"></script>
+    <script type="text/javascript" src="../js_subpages/ymca.js"></script>
 </body>
 </html>

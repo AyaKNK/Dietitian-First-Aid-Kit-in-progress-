@@ -10,41 +10,27 @@
   font-size: 18px;
   z-index: 100;
   text-decoration: none;
-  text-shadow: 0px 0px 0 #000, -1px -1px 0 #000,   1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-  -webkit-text-stroke: .5px black;
-  z-index: 100;
 }
 
 .return-btn .arrow {
-  background: url(../../img/my-logo/return-arrow-white.png) no-repeat center center;
+  background: url(../../img/my-logo/return-btn.png) no-repeat center center;
   -webkit-transition: .3s all;
   transition: .3s all;
   background-size: contain;
   width: inherit;
-  height: 35px;
-  margin: 0;
-  z-index: -1;
-}
-
-.return-btn .return {
-  color: white;
-  -webkit-transition: .3s all;
-  transition: .3s all;
+  height: 65px;
+  width: 65px;
   margin: 0;
   z-index: -1;
 }
 
 .return-btn:hover .arrow {
-  background: url(../../img/my-logo/return-arrow-white-hover.png) no-repeat center center;
+  background: url(../../img/my-logo/return-btn-hover.png) no-repeat center center;
   -webkit-transition: .3s all;
   transition: .3s all;
   background-size: contain;
-}
-
-.return-btn:hover .return {
-  color: gray;
-  -webkit-transition: .3s all;
-  transition: .3s all;
+  height: 75px;
+  width: 75px;
 }
 
 * {
@@ -62,7 +48,7 @@ body, html {
 }
 
 .subpage-title {
-  margin: 40px auto 30px;
+  margin: 60px auto 30px;
   text-align: center;
   font-family: 'Noto Sans', sans-serif;
   font-weight: 900;
@@ -87,14 +73,14 @@ body, html {
   letter-spacing: 1px;
 }
 
-.select-field {
+.select-container {
   height: 30px;
   position: relative;
   width: 100%;
   margin: 30px auto;
 }
 
-.select-field p {
+.select-container p {
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -102,10 +88,10 @@ body, html {
   display: inline-block;
   left: 15%;
   font-size: 20px;
-  font-weight: bolder !important;
+  font-weight: bolder;
 }
 
-.select-field select {
+.select-container select {
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -119,28 +105,28 @@ body, html {
   height: 30px;
   outline: none;
   width: 102.44px;
-  -webkit-transition: .1s all;
-  transition: .1s all;
+  -webkit-transition: .3s all;
+  transition: .3s all;
 }
 
-.select-field option {
-  background: rgba(0, 0, 0, 0.8);
+.select-container select:hover {
+  background: rgba(128, 128, 128, 0.4);
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.select-container option {
+  background: rgba(0, 0, 0, 0.9);
   color: white;
-  -webkit-transition: .1s all;
-  transition: .1s all;
+  -webkit-transition: .3s all;
+  transition: .3s all;
 }
 
-.select-field option:hover {
-  background: rgba(138, 28, 9, 0.5);
-  -webkit-transition: .1s all;
-  transition: .1s all;
-}
-
-.select-field.select-field-wide {
+.select-container.select-container-wide {
   height: 78px;
 }
 
-.select-field.select-field-wide p {
+.select-container.select-container-wide p {
   top: 0;
   display: block;
   left: 50%;
@@ -148,7 +134,7 @@ body, html {
           transform: translateX(-50%);
 }
 
-.select-field.select-field-wide select {
+.select-container.select-container-wide select {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -156,14 +142,14 @@ body, html {
   margin: 10px 0 0 0;
 }
 
-.input-field {
+.input-container {
   height: 30px;
   margin: 30px auto;
   width: 300px;
   font-size: 20px;
 }
 
-.input-field input[type=text] {
+.input-container input[type=text] {
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -175,17 +161,26 @@ body, html {
   right: 25%;
   width: 102.44px;
   text-align: center;
+  -webkit-transition: all .3s;
+  transition: all .3s;
 }
 
-.input-field input:focus {
+.input-container input[type=text]:hover, .input-container input[type=text]:focus {
+  background: rgba(128, 128, 128, 0.4);
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.input-container input:focus {
   outline: 0;
 }
 
-.input-field p {
+.input-container p {
   display: inline-block;
+  font-weight: bolder;
 }
 
-.input-field p:nth-child(1) {
+.input-container p:nth-child(1) {
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -193,19 +188,19 @@ body, html {
   left: 15%;
 }
 
-.input-field p:nth-child(3) {
+.input-container p:nth-child(3) {
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  right: 15%;
+  right: 13%;
 }
 
-.input-field.input-field-wide {
+.input-container.input-container-wide {
   height: 78px;
 }
 
-.input-field.input-field-wide input[type=text] {
+.input-container.input-container-wide input[type=text] {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -213,7 +208,7 @@ body, html {
   margin: 10px 0 0 0;
 }
 
-.input-field.input-field-wide p:nth-child(1) {
+.input-container.input-container-wide p:nth-child(1) {
   top: 0;
   display: block;
   left: 50%;
@@ -221,7 +216,7 @@ body, html {
           transform: translateX(-50%);
 }
 
-.input-field.input-field-wide p:nth-child(3) {
+.input-container.input-container-wide p:nth-child(3) {
   top: none;
   -webkit-transform: none;
           transform: none;
@@ -250,6 +245,12 @@ body, html {
   height: auto;
   width: 100%;
   opacity: 0;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.validation-text p {
+  margin: 0 0 30px 0;
 }
 
 .score {
@@ -259,7 +260,7 @@ body, html {
           transform: translateX(-50%);
   margin: 0;
   width: 80%;
-  height: 80px;
+  height: 90px;
   font-size: 26px;
   border-bottom: 0.5px white solid;
 }
@@ -273,6 +274,7 @@ body, html {
 
 .score p:nth-child(1) {
   display: inline-block;
+  font-weight: bolder;
 }
 
 .score p:nth-child(2) {
@@ -287,7 +289,7 @@ body, html {
   display: block;
   text-align: center;
   width: 100%;
-  bottom: 25px;
+  bottom: 35px;
   opacity: 0;
 }
 
@@ -298,7 +300,7 @@ body, html {
 }
 
 .score__longer {
-  height: 120px !important;
+  height: 140px !important;
 }
 
 button {
@@ -353,17 +355,103 @@ button:active {
   transition: .1s all;
   font-size: 21px !important;
   border: 1.5px white solid !important;
+  background: transparent;
   width: 102px;
   outline: 0 !important;
-}
-
-button:focus {
-  outline: none !important;
 }
 
 .margin {
   height: 30px;
   position: relative;
   margin: 40px 0;
+}
+
+@media only screen and (max-width: 475px) {
+  div.container-fluid, div.container {
+    width: 100%;
+    padding: 0;
+  }
+  .subpage-title {
+    font-size: 30px;
+    margin: 67px 10px 20px 10px;
+  }
+  .description p.description__text {
+    border-radius: 0;
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+  .wrapper {
+    border-radius: 0;
+    margin: 10px 0 20px 0;
+    padding: 10px 0;
+    width: 100%;
+    max-width: 100%;
+  }
+  .input-container {
+    margin: 10px auto;
+    font-size: 16px;
+  }
+  .input-container input[type=text] {
+    width: 32vw;
+    right: 25%;
+  }
+  .select-container {
+    margin: 10px auto;
+    font-size: 16px;
+  }
+  .select-container p {
+    font-size: 16px;
+  }
+  .select-container select {
+    width: 32vw;
+    right: 25%;
+  }
+  .select-container select:hover {
+    background: transparent;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+  }
+  .select-container select:active {
+    background: rgba(128, 128, 128, 0.4);
+    -webkit-transition: all .1s;
+    transition: all .1s;
+  }
+  .select-container.select-container-wide {
+    margin: 20px 0 10px 0;
+  }
+  .select-container.select-container-wide p {
+    margin: 0 0 8px 0;
+  }
+  .select-container.select-container-wide select {
+    margin: 0;
+  }
+  .validation-text p {
+    margin: 5px 0 20px 0;
+  }
+  .return-btn {
+    position: absolute;
+    -webkit-transform: translate(-50%, 0%);
+            transform: translate(-50%, 0%);
+    top: 10px;
+    left: 50%;
+  }
+  .return-btn .arrow {
+    width: 55px;
+    height: 55px;
+  }
+  .return-btn:hover .arrow, .return-btn:active .arrow {
+    height: 60px;
+    width: 60px;
+  }
+  .btn:hover:before {
+    bottom: -40px;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+  }
+  .btn:active:before {
+    bottom: 0;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+  }
 }
 /*# sourceMappingURL=calc-style.css.map */

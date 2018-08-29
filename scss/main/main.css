@@ -12,6 +12,10 @@ body, html {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .background {
@@ -24,8 +28,8 @@ body, html {
   width: 100%;
   margin: 0;
   padding: 0;
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0)), color-stop(rgba(0, 0, 0, 0)), color-stop(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.2))), -webkit-gradient(linear, right top, left top, from(rgba(0, 0, 0, 0)), color-stop(rgba(0, 0, 0, 0)), color-stop(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.2))), -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), color-stop(rgba(0, 0, 0, 0)), color-stop(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.2))), -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), color-stop(rgba(0, 0, 0, 0)), color-stop(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.2))), url(../../img/backgrounds/diet-plan.jpg) no-repeat top center;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2)), linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2)), linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2)), linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2)), url(../../img/backgrounds/diet-plan.jpg) no-repeat top center;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0)), color-stop(rgba(0, 0, 0, 0)), color-stop(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.3))), -webkit-gradient(linear, right top, left top, from(rgba(0, 0, 0, 0)), color-stop(rgba(0, 0, 0, 0)), color-stop(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.3))), -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), color-stop(rgba(0, 0, 0, 0)), color-stop(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.3))), -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), color-stop(rgba(0, 0, 0, 0)), color-stop(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.3))), url(../../img/backgrounds/diet-plan.jpg) no-repeat top center;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)), linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)), linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)), linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)), url(../../img/backgrounds/diet-plan.jpg) no-repeat top center;
   background-size: cover;
   /* filter: blur(2px) contrast(2) brightness(1) grayscale(0.5); */
 }
@@ -88,18 +92,19 @@ body, html {
 
 .scroll-top-btn {
   position: fixed;
-  bottom: 0;
+  bottom: calc(-50px + -4vw);
   right: 0;
   margin: calc(5px + 1vw);
   width: calc(40px + 2vw);
   height: calc(40px + 2vw);
   background: rgba(0, 0, 0, 0.8);
+  border: 1.5px black solid;
   border-radius: 5px;
-  display: none;
   cursor: pointer;
   z-index: 100;
-  -webkit-transition: all .2s;
-  transition: all .2s;
+  -webkit-transition: all .6s;
+  transition: all .6s;
+  z-index: 9999;
 }
 
 .scroll-top-btn .arrow-top {
@@ -119,6 +124,12 @@ body, html {
   background: rgba(48, 48, 48, 0.7);
   -webkit-transition: all .2s;
   transition: all .2s;
+}
+
+.scroll-top-btn.scroll-top-btn__smooth-fade {
+  bottom: 0px;
+  -webkit-transition: all .6s;
+  transition: all .6s;
 }
 
 .title__wrapper {
@@ -207,10 +218,6 @@ body, html {
   padding-bottom: 1.2vw;
 }
 
-/*
-    height: 16vw;
-    font-size: 5vw;
-  */
 .description {
   position: relative;
   color: white;
@@ -221,7 +228,7 @@ body, html {
   text-align: center;
   font-size: calc(6px + 1vw);
   border-radius: 10px;
-  padding: 15px;
+  padding: 1.5vw;
   margin: 2vw 0;
 }
 
@@ -252,7 +259,7 @@ body, html {
   width: 150px;
   height: 52px;
   margin: 0 auto 1vw;
-  border: 2px black solid;
+  border: 1.5px black solid;
   border-radius: 10px;
   cursor: pointer;
   -webkit-user-select: none;
@@ -261,7 +268,7 @@ body, html {
           user-select: none;
   -webkit-transition: all .3s;
   transition: all .3s;
-  background: rgba(138, 28, 9, 0.5);
+  background: rgba(0, 0, 0, 0.8);
 }
 
 .button__show-hide p {
@@ -273,7 +280,7 @@ body, html {
   display: inline-block;
   font-weight: bold;
   line-height: 16px;
-  color: black;
+  color: white;
   margin: 0;
 }
 
@@ -300,7 +307,7 @@ body, html {
 }
 
 .button__show-hide:hover {
-  background: rgba(138, 28, 9, 0.8);
+  background: rgba(0, 0, 0, 0.5);
   border: 2px rgba(0, 0, 0, 0.5) solid;
   color: rgba(0, 0, 0, 0.5);
   -webkit-transition: all .3s;
@@ -332,7 +339,7 @@ a .button:not(.nohover):hover {
 }
 
 a .button:not(.nohover):hover .button__title {
-  top: 35%;
+  top: 30%;
   -webkit-transition: all .3s;
   transition: all .3s;
 }
@@ -435,102 +442,102 @@ a .nohover .button__background-fadein .button__text-fadein {
 }
 
 .button__bmi {
-  background: url(../../img/backgrounds/transparent/bmi-bg-transparent.png) no-repeat center center;
+  background: url(../../img/backgrounds/thumbnails/transparent/bmi-btn-transparent.png) no-repeat center center;
   background-size: cover;
 }
 
 .button__bmi:hover {
-  background: url(../../img/backgrounds/bmi-bg.jpg) no-repeat center center;
+  background: url(../../img/backgrounds/thumbnails/normal/bmi-btn.jpg) no-repeat center center;
   background-size: cover;
 }
 
 .button__broc {
-  background: url(../../img/backgrounds/transparent/broca-bg-transparent.png) no-repeat center center;
+  background: url(../../img/backgrounds/thumbnails/transparent/broca-btn-transparent.png) no-repeat center center;
   background-size: cover;
 }
 
 .button__broc:hover {
-  background: url(../../img/backgrounds/broca-bg.jpg) no-repeat center center;
+  background: url(../../img/backgrounds/thumbnails/normal/broca-btn.jpg) no-repeat center center;
   background-size: cover;
 }
 
 .button__cpm {
-  background: url(../../img/backgrounds/transparent/cpm-bg-transparent.png) no-repeat center center;
+  background: url(../../img/backgrounds/thumbnails/transparent/cpm-btn-transparent.png) no-repeat center center;
   background-size: cover;
 }
 
 .button__cpm:hover {
-  background: url(../../img/backgrounds/cpm-bg.jpg) no-repeat center center;
+  background: url(../../img/backgrounds/thumbnails/normal/cpm-btn.jpg) no-repeat center center;
   background-size: cover;
 }
 
 .button__glycemic {
-  background: url(../../img/backgrounds/transparent/glycemic-bg-transparent.png) no-repeat center center;
+  background: url(../../img/backgrounds/thumbnails/transparent/glycemic-btn-transparent.png) no-repeat center center;
   background-size: cover;
 }
 
 .button__glycemic:hover {
-  background: url(../../img/backgrounds/glycemic-bg.jpg) no-repeat center center;
+  background: url(../../img/backgrounds/thumbnails/normal/glycemic-btn.jpg) no-repeat center center;
   background-size: cover;
 }
 
 .button__lorentz {
-  background: url(../../img/backgrounds/transparent/lorentz-bg-transparent.png) no-repeat center center;
+  background: url(../../img/backgrounds/thumbnails/transparent/lorentz-btn-transparent.png) no-repeat center center;
   background-size: cover;
 }
 
 .button__lorentz:hover {
-  background: url(../../img/backgrounds/lorentz-bg.jpg) no-repeat center center;
+  background: url(../../img/backgrounds/thumbnails/normal/lorentz-btn.jpg) no-repeat center center;
   background-size: cover;
 }
 
 .button__harris-benedict {
-  background: url(../../img/backgrounds/transparent/harris-benedict-bg-transparent.png) no-repeat center center;
+  background: url(../../img/backgrounds/thumbnails/transparent/harris-benedict-btn-transparent.png) no-repeat center center;
   background-size: cover;
 }
 
 .button__harris-benedict:hover {
-  background: url(../../img/backgrounds/harris-benedict-bg.jpg) no-repeat center center;
+  background: url(../../img/backgrounds/thumbnails/normal/harris-benedict-btn.jpg) no-repeat center center;
   background-size: cover;
 }
 
 .button__mifflin {
-  background: url(../../img/backgrounds/transparent/mifflin-bg-transparent.png) no-repeat center center;
+  background: url(../../img/backgrounds/thumbnails/transparent/mifflin-btn-transparent.png) no-repeat center center;
   background-size: cover;
 }
 
 .button__mifflin:hover {
-  background: url(../../img/backgrounds/mifflin-bg.jpg) no-repeat center center;
+  background: url(../../img/backgrounds/thumbnails/normal/mifflin-btn.jpg) no-repeat center center;
   background-size: cover;
 }
 
 .button__pral {
-  background: url(../../img/backgrounds/transparent/pral-bg-transparent.png) no-repeat center center;
+  background: url(../../img/backgrounds/thumbnails/transparent/pral-btn-transparent.png) no-repeat center center;
   background-size: cover;
 }
 
 .button__pral:hover {
-  background: url(../../img/backgrounds/pral-bg.jpg) no-repeat center center;
+  background: url(../../img/backgrounds/thumbnails/normal/pral-btn.jpg) no-repeat center center;
   background-size: cover;
 }
 
 .button__whr {
-  background: url(../../img/backgrounds/transparent/whr-bg-transparent.png) no-repeat center center;
+  background: url(../../img/backgrounds/thumbnails/transparent/whr-btn-transparent.png) no-repeat center center;
   background-size: cover;
 }
 
 .button__whr:hover {
-  background: url(../../img/backgrounds/whr-bg.jpg) no-repeat center center;
+  background: url(../../img/backgrounds/thumbnails/normal/whr-btn.jpg) no-repeat center center;
   background-size: cover;
 }
 
 .button__ymca {
-  background: url(../../img/backgrounds/transparent/ymca-bg-transparent.png) no-repeat center center;
+  background: url(../../img/backgrounds/thumbnails/transparent/ymca-btn-transparent.png) no-repeat center center;
   background-size: cover;
 }
 
 .button__ymca:hover {
-  background: url(../../img/backgrounds/ymca-bg.jpg) no-repeat center center;
+  background: url(../../img/backgrounds/thumbnails/normal/ymca-btn.jpg) no-repeat center center;
   background-size: cover;
 }
 
@@ -549,7 +556,11 @@ footer {
   margin: 15px 0;
 }
 
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 475px) {
+  .description p.description__text {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
   a .button {
     -webkit-transition: all .5s;
     transition: all .5s;
@@ -570,6 +581,11 @@ footer {
   }
   .button__show-hide {
     display: none;
+  }
+  .scroll-top-btn:hover {
+    background: rgba(0, 0, 0, 0.8);
+    -webkit-transition: all .2s;
+    transition: all .2s;
   }
 }
 

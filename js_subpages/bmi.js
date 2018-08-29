@@ -26,7 +26,7 @@ formElement.addEventListener('submit', function(e){
         }
     }
 
-    // counter:
+    // CALCULATE:
     validationText.style.opacity = "0";
 
     const score = document.querySelector('.score').children[1];

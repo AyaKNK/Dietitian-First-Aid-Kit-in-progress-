@@ -30,8 +30,7 @@
         </div>
         <a href="../main.html">
             <div class="return-btn">
-                <div class="arrow"></div>
-                <p class="return">POWRÓT</p>
+                <div class="arrow" title="Powrót"></div>
             </div>
         </a>
         <div class="container">
@@ -44,7 +43,9 @@
             <div class="row">
                     <div class="col-lg-12 col-xs-12 description">
                         <p class="description__text">
-                            Jest to kalkulator pozwalający na dokładne określenie typu sylwetki oraz ew. typu nadwagi (brzuszna bądź udowa). Dzięki niemu można dokładniej opracować dietę do indywidualnych potrzeb.
+                            Jest to kalkulator pozwalający na dokładne określenie typu sylwetki oraz ew. typu nadwagi (brzuszna bądź udowa). Dzięki niemu można dokładniej opracować dietę do indywidualnych potrzeb. 
+                            <br><br> Wzór:
+                            <br> WHR (Waist / Hip Ratio) = obwód talii [cm] / obwód bioder [cm]
                         </p>
                         <div class="description__bg-decoration-left"></div>
                         <div class="description__bg-decoration-right"></div>
@@ -54,7 +55,7 @@
                 <div class="wrapper">
                     <div class="container">
                         <div class="row">
-                            <div class="col-lg-12 col-xs-12 select-field">
+                            <div class="col-lg-12 col-xs-12 select-container">
                                 <p>Płeć:</p>
                                 <select>
                                     <option>Mężczyzna</option>
@@ -63,16 +64,16 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-lg-12 col-xs-12 input-field">
+                            <div class="col-lg-12 col-xs-12 input-container">
                                 <p>Obwód talii:</p>
-                                <input type="number" class="growth">
+                                <input type="text" class="input-field waist">
                                 <p>cm</p>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-lg-12 col-xs-12 input-field">
+                            <div class="col-lg-12 col-xs-12 input-container">
                                 <p>Obwód<br>bioder:</p>
-                                <input type="number" class="weight">
+                                <input type="text" class="input-field hips">
                                 <p>cm</p>
                             </div>
                         </div>
@@ -85,8 +86,9 @@
                         </div>
                         <div class="row">
                             <div class="col-lg-12 col-xs-12">
-                                <div class="score">
+                                <div class="score score__longer">
                                     <p>Wynik:</p>
+                                    <p></p>
                                     <p></p>
                                 </div>
                             </div>
@@ -103,6 +105,7 @@
             </form>
         </div>
     </div>
-    <script src="whr.js"></script>
+    <script type="text/javascript" src="../js_subpages/_subpages_common-validation.js"></script>
+    <script type="text/javascript" src="../js_subpages/whr.js"></script>
 </body>
 </html>

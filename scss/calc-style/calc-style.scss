@@ -13,7 +13,7 @@
     left: 50%;
     transform: translateX(-50%);
 }
-@mixin standard-field-height {
+@mixin standard-container-height {
     height: 30px;
 }
 @mixin primary-border {
@@ -31,39 +31,24 @@
     font-size: 18px;
     z-index: 100;
     text-decoration: none;
-    text-shadow:
-    0px 0px 0 #000,
-    -1px -1px 0 #000,  
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
-    1px 1px 0 #000;
-    -webkit-text-stroke: .5px black;
-    z-index: 100;
     .arrow {
-        background: url(../../img/my-logo/return-arrow-white.png) no-repeat center center;
+        background: url(../../img/my-logo/return-btn.png) no-repeat center center;
         transition: .3s all;
         background-size: contain;
         width: inherit;
-        height: 35px;
-        margin: 0;
-        z-index: -1;
-    }
-    .return {
-        color: white;
-        transition: .3s all;
+        height: 65px;
+        width: 65px;
         margin: 0;
         z-index: -1;
     }
 }
 .return-btn:hover {
     .arrow {
-        background: url(../../img/my-logo/return-arrow-white-hover.png) no-repeat center center;
+        background: url(../../img/my-logo/return-btn-hover.png) no-repeat center center;
         transition: .3s all;
         background-size: contain;
-    }
-    .return {
-        color: rgb(128, 128, 128);
-        transition: .3s all;
+        height: 75px;
+        width: 75px;
     }
 }
 
@@ -83,7 +68,7 @@ body, html {
 // filter: blur(2px) contrast(2) brightness(1) grayscale(0.5);
 
 .subpage-title {
-    margin: 40px auto 30px;
+    margin: 60px auto 30px;
     text-align: center;
     font-family: 'Noto Sans', sans-serif;
     font-weight: 900;
@@ -112,8 +97,8 @@ body, html {
     letter-spacing: 1px;
 }
 
-.select-field {
-    @include standard-field-height;
+.select-container {
+    @include standard-container-height;
     position: relative;
     width: 100%;
     margin: 30px auto;
@@ -122,29 +107,30 @@ body, html {
         display: inline-block;
         left: 15%;
         font-size: 20px;
-        font-weight: bolder !important;
+        font-weight: bolder;
     }
     select {
         @include vertical-align__center;
         @include primary-border;
         right: 25%;
-        text-align-last:center; 
+        text-align-last: center;
         height: 30px;
         outline: none;
         width: 102.44px;
-        transition: .1s all;
+        transition: .3s all;
+    }
+    select:hover {
+        background: rgba(128, 128, 128, 0.4);
+        transition: all .3s;
     }
     option {
-        background: rgba(0,0,0,0.8);
+        background: rgba(0,0,0,0.9);
         color: white;
-        transition: .1s all;
-    }
-    option:hover {
-        background: rgba(138, 28, 9, 0.5);
-        transition: .1s all;
+        transition: .3s all;
     }
 }
-.select-field.select-field-wide {
+
+.select-container.select-container-wide {
     height: 78px;
     p {
         top: 0;
@@ -160,8 +146,8 @@ body, html {
     }
 }
 
-.input-field {
-    @include standard-field-height;
+.input-container {
+    @include standard-container-height;
     margin: 30px auto;
     width: 300px;
     font-size: 20px;
@@ -171,12 +157,18 @@ body, html {
         right: 25%;
         width: 102.44px;
         text-align: center;
+        transition: all .3s;
+    }
+    input[type=text]:hover, input[type=text]:focus {
+        background: rgba(128, 128, 128, 0.4);
+        transition: all .3s;
     }
     input:focus {
         outline: 0;
     }
     p {
         display: inline-block;
+        font-weight: bolder;
     }
     p:nth-child(1) {
         @include vertical-align__center;
@@ -184,10 +176,10 @@ body, html {
     }
     p:nth-child(3) {
         @include vertical-align__center; 
-        right: 15%;
+        right: 13%;
     }
 }
-.input-field.input-field-wide {
+.input-container.input-container-wide {
     height: 78px;
     input[type=text] {
         left: 50%;
@@ -227,6 +219,10 @@ body, html {
     height: auto;
     width: 100%;
     opacity: 0;
+    transition: all .2s;
+    p {
+        margin: 0 0 30px 0;
+    }
 }
 
 
@@ -236,7 +232,7 @@ body, html {
     transform: translateX(-50%);
     margin: 0;
     width: 80%;
-    height: 80px;
+    height: 90px;
     font-size: 26px;
     border-bottom: .5px rgb(255, 255, 255) solid;
     p {
@@ -244,6 +240,7 @@ body, html {
     }
     p:nth-child(1) {
         display: inline-block;
+        font-weight: bolder;
     }
     p:nth-child(2) {
         display: block;
@@ -256,7 +253,7 @@ body, html {
         display: block;
         text-align: center;
         width: 100%;
-        bottom: 25px;
+        bottom: 35px;
         opacity: 0;
     }
     p:nth-child(2).show, p:nth-child(3).show {
@@ -266,7 +263,7 @@ body, html {
 }
 
 .score__longer {
-    height: 120px !important;
+    height: 140px !important;
 }
 
 
@@ -310,16 +307,103 @@ button:active {
     transition: .1s all;
     font-size: 21px !important;
     border: 1.5px white solid !important;
+    background: transparent;
     width: 102px;
     outline: 0 !important;
-}
-button:focus {
-    outline: none !important;
 }
 
 
 .margin {
-    @include standard-field-height;
+    @include standard-container-height;
     position: relative;
     margin: 40px 0;
+}
+
+@media only screen and (max-width: 475px) {
+    div.container-fluid, div.container {
+        width: 100%;
+        padding: 0;
+    }
+    .subpage-title {
+        font-size: 30px;
+        margin: 67px 10px 20px 10px;
+    }
+    .description p.description__text {
+      border-radius: 0;
+      font-size: 14px;
+      padding: 10px 20px;
+    }
+    .wrapper {
+        border-radius: 0;
+        margin: 10px 0 20px 0;
+        padding: 10px 0;
+        width: 100%;
+        max-width: 100%;
+    }
+    .input-container {
+        margin: 10px auto;
+        font-size: 16px;
+        input[type=text] {
+            width: 32vw;
+            right: 25%;
+        }
+    }
+    .select-container {
+        margin: 10px auto;
+        font-size: 16px;
+        p {
+            font-size: 16px;
+        }
+        select {
+            width: 32vw;
+            right: 25%;
+        }
+        select:hover {
+            background: transparent;
+            transition: all .3s;
+        }
+        select:active {
+            background: rgba(128, 128, 128, 0.4);
+            transition: all .1s;
+        }
+    }
+    .select-container.select-container-wide {
+        margin: 20px 0 10px 0;
+        p {
+            margin: 0 0 8px 0;
+        }
+        select {
+            margin: 0;
+        }
+    }
+    .validation-text {
+        p {
+            margin: 5px 0 20px 0;
+        }
+    }
+    .return-btn {
+        position: absolute;
+        transform: translate(-50%, 0%);
+        top: 10px;
+        left: 50%;
+        .arrow {
+            width: 55px;
+            height: 55px;
+        }
+    }
+    .return-btn:hover, .return-btn:active {
+        .arrow {
+            height: 60px;
+            width: 60px;
+        }
+    }
+
+    .btn:hover:before {
+        bottom: -40px;
+        transition: all 0.2s ease;
+    }
+    .btn:active:before {
+        bottom: 0;
+        transition: all 0.2s ease;
+    }
 }

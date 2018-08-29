@@ -30,8 +30,7 @@
         </div>
         <a href="../main.html">
             <div class="return-btn">
-                <div class="arrow"></div>
-                <p class="return">POWRÓT</p>
+                <div class="arrow" title="Powrót"></div>
             </div>
         </a>
         <div class="container">
@@ -44,7 +43,10 @@
             <div class="row">
                     <div class="col-lg-12 col-xs-12 description">
                         <p class="description__text">
-                            Wzór Lorentza jest dokładniejszy od wzoru Broca, ponieważ bierze pod uwagę więcej czynników oraz obliczenia są bardziej dokładne. Nie oznacza to, że wzór Broca jest złym wzorem. Prostota obliczeń jest na tyle dużą zaletą, że wielu dietetyków używa wzoru Broca na co dzień. Natomiast wzór Lorentza pozwala na lepsze dostosowanie indywidualnego planu żywieniowego.
+                            Wzór Lorentza jest dokładniejszy od wzoru Broca, ponieważ bierze pod uwagę więcej czynników oraz obliczenia są bardziej dokładne. Nie oznacza to, że wzór Broca jest złym wzorem. Prostota obliczeń jest na tyle dużą zaletą, że wielu dietetyków używa wzoru Broca na co dzień. Natomiast wzór Lorentza pozwala na lepsze dostosowanie indywidualnego planu żywieniowego. 
+                            <br><br> Wzór:
+                            <br> Należna masa ciała (kobiety) = wzrost [cm] - 100 - ((wzrost [cm] - 150) / 2)
+                            <br> Należna masa ciała (mężczyźni) = wzrost [cm] - 100 - ((wzrost [cm] - 150) / 4)
                         </p>
                         <div class="description__bg-decoration-left"></div>
                         <div class="description__bg-decoration-right"></div>
@@ -54,7 +56,7 @@
                 <div class="wrapper">
                     <div class="container">
                         <div class="row">
-                            <div class="col-lg-12 col-xs-12 select-field">
+                            <div class="col-lg-12 col-xs-12 select-container">
                                 <p>Płeć:</p>
                                 <select>
                                     <option>Mężczyzna</option>
@@ -63,9 +65,9 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-lg-12 col-xs-12 input-field">
+                            <div class="col-lg-12 col-xs-12 input-container">
                                 <p>Wzrost:</p>
-                                <input type="number" class="growth">
+                                <input type="text" class="input-field growth">
                                 <p>cm</p>
                             </div>
                         </div>
@@ -96,6 +98,7 @@
             </form>
         </div>
     </div>
-    <script src="lorentz.js"></script>
+    <script type="text/javascript" src="../js_subpages/_subpages_common-validation.js"></script>
+    <script type="text/javascript" src="../js_subpages/lorentz.js"></script>
 </body>
 </html>

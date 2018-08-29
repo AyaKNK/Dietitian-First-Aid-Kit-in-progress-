@@ -15,26 +15,52 @@ formElement.addEventListener('keypress', function(e){
 });
 
 // changing commas to dots
+// checking, if all input fields is filled and removing red validation from borders and text
 
-let commaChange = document.getElementsByClassName('input__comma-change');
+let inputField = document.getElementsByClassName('input-field');
 
 formElement.addEventListener('keyup', function(){
     for(v=0; v < allValueFields.length; v++) {
-        commaChange[v].value = commaChange[v].value.replace(/,/g, '.')
-        while (commaChange[v].value && (commaChange[v].value.match(/[.]/g)||[]).length >= 2) {
-            commaChange[v].value = commaChange[v].value.replace(/.$/g, "");
+        inputField[v].value = inputField[v].value.replace(/,/g, '.')
+        while (inputField[v].value && (inputField[v].value.match(/[.]/g)||[]).length >= 2) {
+            inputField[v].value = inputField[v].value.replace(/.$/g, "");
+        }
+        if ((allValueFields[v].value.match(/[0-9]/g)||[]).length >= 1) {
+            allValueFields[v].style.border = 'none';
+            allValueFields[v].style.borderBottom = '2px solid white';
+        }
+    }
+    for(x=0; x < allValueFields.length; x++) {
+        if (allValueFields[x].value == "") {
+            return false;
+        }
+    }
+    validationText.style.opacity = "0";
+});
+
+// block first dot or number 0     POKOMBINOWAC ZEBY BLOKOWALO DRUGIE ZERO NA POCZATKU
+
+// formElement.addEventListener('input', function(){
+//     for(v=0; v < allValueFields.length; v++) {
+//         if (/^0/.test(inputField[v].value).length >= 2) {
+//             inputField[v].value = inputField[v].value.replace(/^0/, "")
+//         } else if (/^,/g.test(inputField[v].value)){
+//             inputField[v].value = inputField[v].value.replace(/^,/g, "")
+//         }
+//     }
+// }); 
+formElement.addEventListener('keyup', function(){
+    for(v=0; v < allValueFields.length; v++) {
+        while (inputField[v].value && (inputField[v].value.match(/^0/g)||[]).length >= 2) {
+            inputField[v].value = inputField[v].value.replace(/0$/g, "");
         }
     }
 });
 
-// block first dot or number 0
-
 formElement.addEventListener('input', function(){
     for(v=0; v < allValueFields.length; v++) {
-        if (/^0/.test(commaChange[v].value)) {
-            commaChange[v].value = commaChange[v].value.replace(/^0/, "")
-        } else if (/^,/g.test(commaChange[v].value)){
-            commaChange[v].value = commaChange[v].value.replace(/^,/g, "")
+        if (/^,/g.test(inputField[v].value)){
+            inputField[v].value = inputField[v].value.replace(/^,/g, "")
         }
     }
 });

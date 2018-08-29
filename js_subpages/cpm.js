@@ -26,7 +26,7 @@ formElement.addEventListener('submit', function(e){
         }
     }
 
-    // counter:
+    // CALCULATE:
     validationText.style.opacity = "0";
 
     const select = document.getElementsByTagName('select');
@@ -54,8 +54,6 @@ formElement.addEventListener('submit', function(e){
     select[2].children[3].value = 1.75;
     select[2].children[4].value = 2;
     select[2].children[5].value = 2.3;
-
-   console.log(select[2].selectedIndex);
     
     const modelManHB = Math.round((66.5 + (5.003*growthValue) + (13.75*weightValue) - (6.775*ageValue)));
     const modelManMifflin = Math.round(((6.25*growthValue) + (10*weightValue) - (5*ageValue)) + 5);

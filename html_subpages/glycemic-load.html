@@ -30,8 +30,7 @@
         </div>
         <a href="../main.html">
             <div class="return-btn">
-                <div class="arrow"></div>
-                <p class="return">POWRÓT</p>
+                <div class="arrow" title="Powrót"></div>
             </div>
         </a>
         <div class="container">
@@ -45,6 +44,8 @@
                     <div class="col-lg-12 col-xs-12 description">
                         <p class="description__text">
                             Kalkulator ładunku glikemicznego pomoże w określeniu zawartości węglowodanów w pożywieniu. Jest to szczególnie przydatne podczas opracowywania diety nisko lub wysoko-węglowodanowej. Znajomość ładunku glikemicznego jest wyjątkowo potrzebna podczas przygotowywania diety dla pacjenta chorego na cukrzycę bądź chorobę glikogenową.
+                            <br><br> Wzór: 
+                            <br> Ładunek Glikemiczny = (ilość węglowodanów [g] &times; indeks glikemiczny) / 100
                         </p>
                         <div class="description__bg-decoration-left"></div>
                         <div class="description__bg-decoration-right"></div>
@@ -54,16 +55,16 @@
                 <div class="wrapper">
                     <div class="container">
                         <div class="row">
-                            <div class="col-lg-12 col-xs-12 input-field input-field-wide">
+                            <div class="col-lg-12 col-xs-12 input-container input-container-wide">
                                 <p>Węglowodany:</p>
-                                <input type="number" class="growth">
+                                <input type="text" class="input-field carbo">
                                 <p>g</p>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-lg-12 col-xs-12 input-field input-field-wide">
+                            <div class="col-lg-12 col-xs-12 input-container input-container-wide">
                                 <p>Indeks Glikemiczny:</p>
-                                <input type="number" class="weight">
+                                <input type="text" class="input-field glycemic-index">
                                 <p></p>
                             </div>
                         </div>
@@ -101,6 +102,7 @@
             </form>
         </div>
     </div>
-    <script src="glycemic-load.js"></script>
+    <script type="text/javascript" src="../js_subpages/_subpages_common-validation.js"></script>
+    <script type="text/javascript" src="../js_subpages/glycemic-load.js"></script>
 </body>
 </html>

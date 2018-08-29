@@ -2,21 +2,35 @@ const logoHeight = document.querySelector('.logo-height');
 const documentHeight = document.querySelector('.background');
 const scrollTopButton = document.querySelector('.scroll-top-btn');
 
+// window.addEventListener("scroll", function() {
+//     if(window.scrollY <= logoHeight.clientHeight) {
+//         scrollTopButton.style.display = "none";
+//     } else {
+//         scrollTopButton.style.display = "inline-block";
+//     }
+// });
+
 window.addEventListener("scroll", function() {
     if(window.scrollY <= logoHeight.clientHeight) {
-        scrollTopButton.style.display = "none";
+        scrollTopButton.classList.remove('scroll-top-btn__smooth-fade');
     } else {
-        scrollTopButton.style.display = "inline-block";
+        scrollTopButton.classList.add('scroll-top-btn__smooth-fade');
     }
 });
 
+// scrollTopButton.addEventListener('click', function() {
+//     const scroll = setInterval(function() { 
+//         window.scrollTo(0, window.scrollY - 15); 
+//         if(window.scrollY == 0) {
+//             clearInterval(scroll);
+//            }
+//        }, .1);
+// });
+
 scrollTopButton.addEventListener('click', function() {
-    const scroll = setInterval(function() { 
-        window.scrollTo(0, window.scrollY - 15); 
-        if(window.scrollY == 0) {
-            clearInterval(scroll);
-           }
-       }, .1);
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"})
 });
 
 const buttonShowHide = document.querySelector('.button__show-hide');
