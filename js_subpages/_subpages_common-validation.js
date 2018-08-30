@@ -1,5 +1,6 @@
 const formElement = document.forms['calc'];
 const allValueFields = document.getElementsByTagName('input');
+let inputField = document.getElementsByClassName('input-field');
 
 // characters blocker
 
@@ -14,12 +15,20 @@ formElement.addEventListener('keypress', function(e){
     }
 });
 
+// block first dot at beginning of value field
+
+formElement.addEventListener('input', function(){
+    for(v=0; v < allValueFields.length; v++) {
+        if (/^,/g.test(inputField[v].value)){
+            inputField[v].value = inputField[v].value.replace(/^,/g, "")
+        }
+    }
+});
+
 // changing commas to dots
 // checking, if all input fields is filled and removing red validation from borders and text
 
-let inputField = document.getElementsByClassName('input-field');
-
-formElement.addEventListener('keyup', function(){
+formElement.addEventListener('input', function(){
     for(v=0; v < allValueFields.length; v++) {
         inputField[v].value = inputField[v].value.replace(/,/g, '.')
         while (inputField[v].value && (inputField[v].value.match(/[.]/g)||[]).length >= 2) {
@@ -48,19 +57,14 @@ formElement.addEventListener('keyup', function(){
 //             inputField[v].value = inputField[v].value.replace(/^,/g, "")
 //         }
 //     }
-// }); 
-formElement.addEventListener('keyup', function(){
-    for(v=0; v < allValueFields.length; v++) {
-        while (inputField[v].value && (inputField[v].value.match(/^0/g)||[]).length >= 2) {
-            inputField[v].value = inputField[v].value.replace(/0$/g, "");
-        }
-    }
-});
+// });
+
+// block second '0' inside value field
 
 formElement.addEventListener('input', function(){
     for(v=0; v < allValueFields.length; v++) {
-        if (/^,/g.test(inputField[v].value)){
-            inputField[v].value = inputField[v].value.replace(/^,/g, "")
+        while ((inputField[v].value.charAt(1)) == "0") {
+            inputField[v].value = inputField[v].value.replace((inputField[v].value.charAt(1)), "")
         }
     }
 });
